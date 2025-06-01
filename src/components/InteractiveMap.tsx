@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface RegionMallData {
   [regionName: string]: number;
@@ -23,7 +23,6 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
   regionPathData,
   svgViewBox = "0 0 800 1200",
 }) => {
-  const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
 
   const handleRegionClick = (regionName: string) => {
     console.log('Region clicked:', regionName);
@@ -60,8 +59,6 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
             return (
               <g
                 key={region.id}
-                onMouseEnter={() => setHoveredRegion(region.name)}
-                onMouseLeave={() => setHoveredRegion(null)}
                 onClick={() => handleRegionClick(region.name)}
                 className="cursor-pointer"
                 aria-label={`${region.name}: ${count} Malls`}

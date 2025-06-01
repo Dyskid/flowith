@@ -23,7 +23,6 @@ const MallCard: React.FC<MallCardProps> = ({
   isNew,
   lastVerified,
   statusPopular,
-  description,
 }) => {
 
   const handleVisitClick = async (event: React.MouseEvent) => {

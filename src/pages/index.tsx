@@ -120,7 +120,7 @@ const HomePage: NextPage<HomePageProps> = ({ malls, mallCountsByRegion, regionPa
           </h2>
           {filteredMalls.length === 0 && searchQuery !== '' ? (
             <p className="text-center text-gray-600 text-lg mt-8">
-              '{searchQuery}'에 해당하는 마켓을 찾을 수 없습니다.
+              &apos;{searchQuery}&apos;에 해당하는 마켓을 찾을 수 없습니다.
             </p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
